@@ -1,0 +1,351 @@
+.
+├── apps
+│   └── xmtp.chat
+│       ├── index.html
+│       ├── package.json
+│       ├── postcss.config.cjs
+│       ├── public
+│       │   ├── favicon.ico
+│       │   └── xmtp-icon.png
+│       ├── README.md
+│       ├── src
+│       │   ├── assets
+│       │   │   └── xmtp-icon.png
+│       │   ├── components
+│       │   │   ├── AddressBadge.tsx
+│       │   │   ├── App
+│       │   │   │   ├── AccountCard.module.css
+│       │   │   │   ├── AccountCard.tsx
+│       │   │   │   ├── App.tsx
+│       │   │   │   ├── AppFooter.tsx
+│       │   │   │   ├── AppHeader.module.css
+│       │   │   │   ├── AppHeader.tsx
+│       │   │   │   ├── AppLayout.tsx
+│       │   │   │   ├── AppMenu.tsx
+│       │   │   │   ├── Connect.module.css
+│       │   │   │   ├── Connect.tsx
+│       │   │   │   ├── DisableAnalytics.tsx
+│       │   │   │   ├── Disconnect.tsx
+│       │   │   │   ├── ErrorModal.tsx
+│       │   │   │   ├── LoggingSelect.tsx
+│       │   │   │   ├── NetworkSelect.tsx
+│       │   │   │   ├── SelectConversation.tsx
+│       │   │   │   ├── Welcome.tsx
+│       │   │   │   └── WelcomeLayout.tsx
+│       │   │   ├── BadgeWithCopy.module.css
+│       │   │   ├── BadgeWithCopy.tsx
+│       │   │   ├── CodeWithCopy.tsx
+│       │   │   ├── Conversation
+│       │   │   │   ├── Composer.module.css
+│       │   │   │   ├── Composer.tsx
+│       │   │   │   ├── Conversation.tsx
+│       │   │   │   ├── ConversationMenu.tsx
+│       │   │   │   ├── ConversationOutletContext.ts
+│       │   │   │   ├── LoadConversation.tsx
+│       │   │   │   ├── LoadDM.tsx
+│       │   │   │   ├── ManageConsentModal.tsx
+│       │   │   │   ├── ManageMembersModal.tsx
+│       │   │   │   ├── ManageMetadataModal.tsx
+│       │   │   │   ├── ManagePermissionsModal.tsx
+│       │   │   │   ├── Members.tsx
+│       │   │   │   ├── Metadata.tsx
+│       │   │   │   └── Permissions.tsx
+│       │   │   ├── Conversations
+│       │   │   │   ├── ConversationCard.module.css
+│       │   │   │   ├── ConversationCard.tsx
+│       │   │   │   ├── ConversationList.module.css
+│       │   │   │   ├── ConversationList.tsx
+│       │   │   │   ├── ConversationsMenu.tsx
+│       │   │   │   ├── ConversationsNavbar.tsx
+│       │   │   │   ├── CreateDmModal.tsx
+│       │   │   │   └── CreateGroupModal.tsx
+│       │   │   ├── CopyButton.module.css
+│       │   │   ├── CopyButton.tsx
+│       │   │   ├── DateLabel.tsx
+│       │   │   ├── Identity
+│       │   │   │   ├── IdentityModal.tsx
+│       │   │   │   └── InstallationTable.tsx
+│       │   │   ├── LoadingMessage.tsx
+│       │   │   ├── Messages
+│       │   │   │   ├── GroupUpdatedContent.tsx
+│       │   │   │   ├── Message.module.css
+│       │   │   │   ├── Message.tsx
+│       │   │   │   ├── MessageContent.module.css
+│       │   │   │   ├── MessageContent.tsx
+│       │   │   │   ├── MessageList.module.css
+│       │   │   │   ├── MessageList.tsx
+│       │   │   │   ├── MessageModal.tsx
+│       │   │   │   ├── MessageProperties.tsx
+│       │   │   │   ├── Messages.tsx
+│       │   │   │   ├── TransactionReferenceContent.tsx
+│       │   │   │   └── WalletSendCallsContent.tsx
+│       │   │   └── Modal.tsx
+│       │   ├── contexts
+│       │   │   └── XMTPContext.tsx
+│       │   ├── globals.css
+│       │   ├── globals.d.ts
+│       │   ├── helpers
+│       │   │   ├── createSigner.ts
+│       │   │   ├── date.ts
+│       │   │   ├── errors.ts
+│       │   │   └── strings.ts
+│       │   ├── hooks
+│       │   │   ├── useAnalytics.ts
+│       │   │   ├── useCollapsedMediaQuery.ts
+│       │   │   ├── useConversation.ts
+│       │   │   ├── useConversations.ts
+│       │   │   ├── useIdentity.ts
+│       │   │   ├── useRedirect.ts
+│       │   │   └── useSettings.ts
+│       │   ├── icons
+│       │   │   ├── CoinbaseWallet.tsx
+│       │   │   ├── EphemeralWallet.tsx
+│       │   │   ├── IconCopy.tsx
+│       │   │   ├── IconDots.tsx
+│       │   │   ├── InjectedWallet.tsx
+│       │   │   ├── MetamaskWallet.tsx
+│       │   │   └── WalletConnectWallet.tsx
+│       │   ├── layouts
+│       │   │   ├── CenteredLayout.module.css
+│       │   │   ├── CenteredLayout.tsx
+│       │   │   ├── ContentLayout.module.css
+│       │   │   ├── ContentLayout.tsx
+│       │   │   ├── MainLayout.module.css
+│       │   │   └── MainLayout.tsx
+│       │   ├── main.tsx
+│       │   └── types.ts
+│       ├── tsconfig.json
+│       ├── vercel.json
+│       └── vite.config.ts
+├── CODE_OF_CONDUCT.md
+├── content-types
+│   ├── content-type-group-updated
+│   │   ├── CHANGELOG.md
+│   │   ├── LICENSE
+│   │   ├── package.json
+│   │   ├── README.md
+│   │   ├── rollup.config.js
+│   │   ├── src
+│   │   │   ├── GroupUpdated.test.ts
+│   │   │   ├── GroupUpdated.ts
+│   │   │   └── index.ts
+│   │   └── tsconfig.json
+│   ├── content-type-primitives
+│   │   ├── CHANGELOG.md
+│   │   ├── LICENSE
+│   │   ├── package.json
+│   │   ├── README.md
+│   │   ├── rollup.config.js
+│   │   ├── src
+│   │   │   ├── index.test.ts
+│   │   │   └── index.ts
+│   │   └── tsconfig.json
+│   ├── content-type-reaction
+│   │   ├── CHANGELOG.md
+│   │   ├── LICENSE
+│   │   ├── package.json
+│   │   ├── README.md
+│   │   ├── rollup.config.js
+│   │   ├── src
+│   │   │   ├── index.ts
+│   │   │   ├── Reaction.test.ts
+│   │   │   └── Reaction.ts
+│   │   ├── tsconfig.json
+│   │   ├── vitest.config.ts
+│   │   └── vitest.setup.ts
+│   ├── content-type-read-receipt
+│   │   ├── CHANGELOG.md
+│   │   ├── LICENSE
+│   │   ├── package.json
+│   │   ├── README.md
+│   │   ├── rollup.config.js
+│   │   ├── src
+│   │   │   ├── index.ts
+│   │   │   ├── ReadReceipt.test.ts
+│   │   │   └── ReadReceipt.ts
+│   │   ├── tsconfig.json
+│   │   ├── vitest.config.ts
+│   │   └── vitest.setup.ts
+│   ├── content-type-remote-attachment
+│   │   ├── CHANGELOG.md
+│   │   ├── LICENSE
+│   │   ├── package.json
+│   │   ├── README.md
+│   │   ├── rollup.config.js
+│   │   ├── src
+│   │   │   ├── Attachment.test.ts
+│   │   │   ├── Attachment.ts
+│   │   │   ├── encryption
+│   │   │   │   ├── Ciphertext.ts
+│   │   │   │   ├── crypto.browser.ts
+│   │   │   │   ├── crypto.ts
+│   │   │   │   ├── encryption.ts
+│   │   │   │   └── index.ts
+│   │   │   ├── index.ts
+│   │   │   ├── RemoteAttachment.test.ts
+│   │   │   └── RemoteAttachment.ts
+│   │   ├── tsconfig.json
+│   │   ├── vitest.config.ts
+│   │   └── vitest.setup.ts
+│   ├── content-type-reply
+│   │   ├── CHANGELOG.md
+│   │   ├── LICENSE
+│   │   ├── package.json
+│   │   ├── README.md
+│   │   ├── rollup.config.js
+│   │   ├── src
+│   │   │   ├── index.ts
+│   │   │   ├── Reply.test.ts
+│   │   │   └── Reply.ts
+│   │   ├── tsconfig.json
+│   │   ├── vitest.config.ts
+│   │   └── vitest.setup.ts
+│   ├── content-type-text
+│   │   ├── CHANGELOG.md
+│   │   ├── LICENSE
+│   │   ├── package.json
+│   │   ├── README.md
+│   │   ├── rollup.config.js
+│   │   ├── src
+│   │   │   ├── index.ts
+│   │   │   ├── Text.test.ts
+│   │   │   └── Text.ts
+│   │   ├── tsconfig.json
+│   │   └── vitest.config.ts
+│   ├── content-type-transaction-reference
+│   │   ├── CHANGELOG.md
+│   │   ├── LICENSE
+│   │   ├── package.json
+│   │   ├── README.md
+│   │   ├── rollup.config.js
+│   │   ├── src
+│   │   │   ├── index.ts
+│   │   │   ├── TransactionReference.test.ts
+│   │   │   └── TransactionReference.ts
+│   │   ├── tsconfig.json
+│   │   ├── vitest.config.ts
+│   │   └── vitest.setup.ts
+│   └── content-type-wallet-send-calls
+│       ├── CHANGELOG.md
+│       ├── LICENSE
+│       ├── package.json
+│       ├── README.md
+│       ├── rollup.config.js
+│       ├── src
+│       │   ├── index.ts
+│       │   ├── WalletSendCalls.test.ts
+│       │   └── WalletSendCalls.ts
+│       ├── tsconfig.json
+│       ├── vitest.config.ts
+│       └── vitest.setup.ts
+├── CONTRIBUTING.md
+├── dev
+│   ├── compose
+│   ├── docker-compose.yml
+│   ├── down
+│   ├── up
+│   └── uploadService
+│       ├── Dockerfile
+│       ├── index.js
+│       └── package.json
+├── eslint.config.js
+├── output.txt
+├── package.json
+├── README.md
+├── sdks
+│   ├── browser-sdk
+│   │   ├── CHANGELOG.md
+│   │   ├── LICENSE
+│   │   ├── package.json
+│   │   ├── README.md
+│   │   ├── rollup.config.js
+│   │   ├── src
+│   │   │   ├── AsyncStream.ts
+│   │   │   ├── Client.ts
+│   │   │   ├── ClientWorkerClass.ts
+│   │   │   ├── constants.ts
+│   │   │   ├── Conversation.ts
+│   │   │   ├── Conversations.ts
+│   │   │   ├── DecodedMessage.ts
+│   │   │   ├── Dm.ts
+│   │   │   ├── Group.ts
+│   │   │   ├── index.ts
+│   │   │   ├── Preferences.ts
+│   │   │   ├── types
+│   │   │   │   ├── clientEvents.ts
+│   │   │   │   ├── clientStreamEvents.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── options.ts
+│   │   │   │   ├── utils.ts
+│   │   │   │   └── utilsEvents.ts
+│   │   │   ├── utils
+│   │   │   │   ├── conversions.ts
+│   │   │   │   ├── createClient.ts
+│   │   │   │   ├── date.ts
+│   │   │   │   ├── errors.ts
+│   │   │   │   └── signer.ts
+│   │   │   ├── Utils.ts
+│   │   │   ├── UtilsWorkerClass.ts
+│   │   │   ├── WorkerClient.ts
+│   │   │   ├── WorkerConversation.ts
+│   │   │   ├── WorkerConversations.ts
+│   │   │   ├── WorkerPreferences.ts
+│   │   │   └── workers
+│   │   │       ├── client.ts
+│   │   │       └── utils.ts
+│   │   ├── test
+│   │   │   ├── AsyncStream.test.ts
+│   │   │   ├── Client.test.ts
+│   │   │   ├── Conversation.test.ts
+│   │   │   ├── Conversations.test.ts
+│   │   │   ├── helpers.ts
+│   │   │   ├── Preferences.test.ts
+│   │   │   └── Utils.test.ts
+│   │   ├── tsconfig.json
+│   │   ├── typedoc.json
+│   │   └── vite.config.ts
+│   └── node-sdk
+│       ├── CHANGELOG.md
+│       ├── LICENSE
+│       ├── package.json
+│       ├── README.md
+│       ├── rollup.config.js
+│       ├── scripts
+│       │   ├── accounts.ts
+│       │   └── groups.ts
+│       ├── src
+│       │   ├── AsyncStream.ts
+│       │   ├── Client.ts
+│       │   ├── constants.ts
+│       │   ├── Conversation.ts
+│       │   ├── Conversations.ts
+│       │   ├── DecodedMessage.ts
+│       │   ├── Dm.ts
+│       │   ├── Group.ts
+│       │   ├── index.ts
+│       │   ├── Preferences.ts
+│       │   ├── types.ts
+│       │   └── utils
+│       │       ├── createClient.ts
+│       │       ├── date.ts
+│       │       ├── errors.ts
+│       │       ├── inboxId.ts
+│       │       ├── signer.ts
+│       │       └── version.ts
+│       ├── test
+│       │   ├── AsyncStream.test.ts
+│       │   ├── Client.test.ts
+│       │   ├── Conversation.test.ts
+│       │   ├── Conversations.test.ts
+│       │   ├── helpers.ts
+│       │   ├── inboxId.test.ts
+│       │   └── Preferences.test.ts
+│       ├── tsconfig.json
+│       ├── vitest.config.ts
+│       └── vitest.setup.ts
+├── tsconfig.json
+├── turbo.json
+├── xmtp_v3_structure.txt
+└── yarn.lock
+
+51 directories, 298 files

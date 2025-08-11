@@ -24,3 +24,21 @@ To learn more about the contents of this repository, see this README and the REA
 ## Contributing
 
 See our [contribution guide](./CONTRIBUTING.md) to learn more about contributing to this project.
+
+To build the app in your workspace, follow these steps:
+
+Install dependencies (from the root of the repo):
+
+
+yarn install
+Build all packages (from the root):
+
+
+yarn build
+This runs the build for all workspaces, including the app and content types.
+
+Run the app in development mode:
+
+
+cd apps/xmtp.chatyarn dev
+This starts the development server for the xmtp.chat React app.
